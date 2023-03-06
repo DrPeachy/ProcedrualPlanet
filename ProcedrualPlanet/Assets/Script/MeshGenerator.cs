@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 [RequireComponent(typeof(MeshFilter))]
 public class MeshGenerator : MonoBehaviour
@@ -29,6 +30,7 @@ public class MeshGenerator : MonoBehaviour
         initMesh();
         // quadUV();
         // UpdateMesh();
+        
     }
 
     private void Update()
