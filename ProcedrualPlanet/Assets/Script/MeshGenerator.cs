@@ -10,10 +10,11 @@ public class MeshGenerator : MonoBehaviour
 
     Vector3[] vertices;
     int[] triangles;
-    public float xPos { get; set; }
-    public float zPos { get; set; }
     public int xSize;
     public int zSize;
+    public float stepLength = 0.2f;
+    public float xPos { get; set; }
+    public float zPos { get; set; }
     public float frequency { get; set; }
     public float amplitude { get; set; }
     public float octwave { get; set; }
@@ -69,7 +70,7 @@ public class MeshGenerator : MonoBehaviour
             for (int x = 0; x <= xSize; x++)
             {
                 float y = fractalNoise(new Vector3(x + xPos, 0, z + zPos));
-                vertices[i] = new Vector3(x - (xSize/2), y, z - (zSize/2));
+                vertices[i] = new Vector3(x - (xSize/2), y, z - (zSize/2)) * stepLength;
                 i++;
             }
         }
