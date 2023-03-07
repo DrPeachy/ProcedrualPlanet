@@ -105,12 +105,12 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _amplitude: 1.81
+    - _amplitude: 3.05
     - _frequency: 0.87
     - _height: 0.27
-    - _lacunarity: 4.93
-    - _persistence: 0.3
-    - _seed: 6167
+    - _lacunarity: 3.1
+    - _persistence: 0.29
+    - _seed: 8497
     - _terrainHeight: 2
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

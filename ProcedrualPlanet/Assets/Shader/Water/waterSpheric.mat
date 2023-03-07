@@ -126,7 +126,7 @@ Material:
     - _oceanHeight: -19
     - _waveDensity: 4.4
     - _waveHeight: 2
-    - _waveIntensity: 0.007
+    - _waveIntensity: 0.187
     - _waveSpeed: 0.1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
