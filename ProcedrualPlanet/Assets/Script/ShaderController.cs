@@ -51,6 +51,7 @@ public class ShaderController : MonoBehaviour
         terrainHeight = 2f;
         colorFactor = 0.65f;
 
+        oceanHeight = 2f;
         foamDensity = 10f;
         foamStrength = 0.894f;
         foamSpeed = 0.86f;
