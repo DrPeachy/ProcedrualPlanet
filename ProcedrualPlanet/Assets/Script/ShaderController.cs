@@ -34,6 +34,12 @@ public class ShaderController : MonoBehaviour
     public float starSpeed {set;get;}
     public float darkColor {set;get;}
     public float lightColor {set;get;}
+    //===========crater=================
+    public bool craterOn {set;get;}
+    public bool foamWhite {set;get;}
+    public float craterHeight {set;get;}
+    public float craterDepth {set;get;}
+    public float craterDensity {set;get;}
     private void Awake() {
         sc = this;
     }
@@ -43,7 +49,7 @@ public class ShaderController : MonoBehaviour
     }
     public void Initialize(){
 
-        seed = 4413f;
+        seed = 3076f;
         frequency = 1f;
         amplitude = 1.15f;
         lacunartiy = 2.9f;
@@ -58,13 +64,22 @@ public class ShaderController : MonoBehaviour
         waveDensity = 2.43f;
         waveIntensity = 0.079f;
         waveSpeed = 1f;
-        oceanColor = 0.3f;
+        oceanColor = 0.488f;
         foamColor = 0f;
 
-        starDensity = 1f;
+        starDensity = 0.03f;
         starSpeed = 2.4e-07f;
         darkColor = 0.4f;
-        lightColor = 0.8f;  
+        lightColor = 0.8f;
+
+        craterOn = false;
+        foamWhite = true;
+        craterHeight = 1f;
+        craterDepth = 2.56f;
+        craterDensity = 5f;
+
+        ocean.SetColor("_foamColor", Color.white);
+        ocean.SetColor("_waterColor", Color.cyan);
     }
     public void UpdateTerrain(){
         terrain.SetFloat("_seed", seed);
@@ -93,5 +108,18 @@ public class ShaderController : MonoBehaviour
         space.SetColor("_Light", Color.HSVToRGB(lightColor, 1, 1));
         space.SetFloat("_StarSize", starDensity);
         space.SetFloat("_RotateSpeed", starSpeed);
+    }
+
+    public void UpdateCrater(){
+        terrain.SetFloat("_craterHeight", craterHeight);
+        terrain.SetFloat("_craterDepth", craterDepth);
+        terrain.SetFloat("_craterDensity", craterDensity);
+    }
+
+    public void UpdateToggle(){
+        Debug.Log(foamWhite);
+        terrain.SetInt("_craterOn", (craterOn)? 1 : 0);
+        ocean.SetColor("_foamColor", (foamWhite)? Color.white : Color.HSVToRGB(foamColor, 1, 1));
+        
     }
 }

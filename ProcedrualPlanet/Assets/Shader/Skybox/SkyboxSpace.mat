@@ -49,10 +49,10 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RotateSpeed: 0.00000024
+    - _RotateSpeed: 0.00001
     - _StarDensity: 1
-    - _StarSize: 0.030000005
+    - _StarSize: 0.024287114
     m_Colors:
-    - _Dark: {r: 0, g: 1, b: 0.4000001, a: 1}
+    - _Dark: {r: 1, g: 0.7265342, b: 0, a: 1}
     - _Light: {r: 0.8000002, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -83,7 +83,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ColorRangeFactor: 0.65
+    - _ColorRangeFactor: 1.1298662
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -106,12 +106,20 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _amplitude: 2.5993235
+    - _amplitude: 4.4530835
+    - _craterDeep: 5.1
+    - _craterDensity: 5
+    - _craterDepth: 12.114863
+    - _craterHeight: 0.7511644
+    - _craterOn: 0
     - _frequency: 1
+    - _g1: 0
+    - _g2: 0
+    - _g3: 0
     - _height: 0.27
     - _lacunarity: 2.9
     - _persistence: 0.319
-    - _seed: 4413
+    - _seed: 3076
     - _terrainHeight: 2
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
